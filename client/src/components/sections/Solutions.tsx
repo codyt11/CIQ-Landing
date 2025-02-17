@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Rocket, Building2, ShoppingCart } from "lucide-react";
+import { TagIcon, ChartAreaIcon, PersonStandingIcon, FolderSync } from "lucide-react";
 
 const solutions = [
   {
     title: "Taggin IQ",
     description:
       "A revolutionary technology that helps you efficiently organize and classify your content with just a few clicks.",
-    icon: Rocket,
+    icon: TagIcon,
   },
   {
     title: "Engagement IQ",
     description:
       "A powerful platform that gives you a deep understanding of your marketing efforts and customer behaviors.",
-    icon: Building2,
+    icon: ChartAreaIcon,
   },
   {
     title: "Customer IQ",
     description:
       "A cutting edge platform that helps you get a complete understanding of your customers.",
-    icon: ShoppingCart,
+    icon: PersonStandingIcon,
   },
   {
     title: "Connect IQ",
     description:
       "Seamlessly integrate, analyze, and act on customer data for data-driven decisions.",
-    icon: ShoppingCart,
+    icon: FolderSync,
   },
 ];
 
