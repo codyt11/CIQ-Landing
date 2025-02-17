@@ -4,25 +4,28 @@ import { Rocket, Building2, ShoppingCart } from "lucide-react";
 
 const solutions = [
   {
-    title: "For Startups",
+    title: "Taggin IQ",
     description:
-      "Launch and scale your startup with our growth-focused marketing solutions",
+      "A revolutionary technology that helps you efficiently organize and classify your content with just a few clicks.",
     icon: Rocket,
-    features: ["Market Research", "Brand Development", "Growth Hacking"],
   },
   {
-    title: "For Enterprise",
+    title: "Engagement IQ",
     description:
-      "Enterprise-grade marketing solutions for established businesses",
+      "A powerful platform that gives you a deep understanding of your marketing efforts and customer behaviors.",
     icon: Building2,
-    features: ["Global Campaign Management", "Advanced Analytics", "Custom Strategy"],
   },
   {
-    title: "For E-commerce",
+    title: "Customer IQ",
     description:
-      "Drive online sales and customer engagement for your e-commerce business",
+      "A cutting edge platform that helps you get a complete understanding of your customers.",
     icon: ShoppingCart,
-    features: ["Conversion Optimization", "Customer Journey", "Performance Marketing"],
+  },
+  {
+    title: "Connect IQ",
+    description:
+      "Seamlessly integrate, analyze, and act on customer data for data-driven decisions.",
+    icon: ShoppingCart,
   },
 ];
 
@@ -39,11 +42,11 @@ export default function Solutions() {
         >
           <h2 className="text-3xl font-bold">Solutions</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Tailored solutions for different business needs
+            Our specialized solutions can help transform your business and quickly generate successful results.
           </p>
         </motion.div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.title}
@@ -61,14 +64,6 @@ export default function Solutions() {
                   <p className="text-muted-foreground mb-6">
                     {solution.description}
                   </p>
-                  <ul className="space-y-2">
-                    {solution.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
                 </CardContent>
               </Card>
             </motion.div>

@@ -8,39 +8,40 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import Autoplay from 'embla-carousel-autoplay';
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, TechStart",
-    image: "https://images.unsplash.com/photo-1516880711640-ef7db81be3e1",
+    name: "Amarin",
+    role: "Happy Client",
+    image: "https://www.mmm-online.com/wp-content/uploads/sites/2/2023/04/Amarin_logo.jpg",
     content:
-      "MarketPro transformed our digital presence and helped us achieve record-breaking growth.",
+      "We’ve partnered with Catalyst IQ to develop and implement a data strategy for customer engagements. Their cutting-edge technology solutions and data-driven insights have significantly enhanced our competitive edge in the industry.",
   },
   {
-    name: "Michael Chen",
-    role: "Marketing Director, GrowthCo",
-    image: "https://images.unsplash.com/photo-1521830101529-057b1dfd9784",
+    name: "NovoNordisk",
+    role: "Happy Client",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Novo_Nordisk_-_Logo.svg/640px-Novo_Nordisk_-_Logo.svg.png",
     content:
-      "Their data-driven approach and strategic insights have been invaluable to our success.",
+      "We were pleasantly surprised by CIQ’s ability to breathe fresh life into our pharmaceutical marketing & sales organization. Their cutting-edge analytics solutions and visionary insights have revitalized our approach to data strategy and analytics.",
   },
   {
-    name: "Emily Rodriguez",
-    role: "Founder, EcoShop",
-    image: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31",
+    name: "Merck",
+    role: "Happy Client",
+    image: "https://www.merck.com/wp-content/uploads/sites/124/2022/03/Merck.png",
     content:
-      "Working with MarketPro has been a game-changer for our e-commerce business.",
-  },
-  {
-    name: "David Kim",
-    role: "CMO, Enterprise Solutions",
-    image: "https://images.unsplash.com/photo-1543269865-cbf427effbad",
-    content:
-      "The results they delivered exceeded our expectations in every way.",
+      "Working with Catalyst IQ has been a game-changer for our marketing and analytics organization. Their data analytics expertise has helped us make informed decisions that have greatly improved our marketing efficiency and decision-making process",
   },
 ];
 
 export default function Testimonials() {
+
+  const autoplay = Autoplay({
+    delay: 5000,
+    stopOnInteraction: true,
+    stopOnMouseEnter: false,
+  });
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
@@ -61,13 +62,21 @@ export default function Testimonials() {
           <Carousel
             opts={{
               align: "start",
+              loop: true,
             }}
+            plugins={[autoplay]}  // Applying the autoplay plugin here
             className="w-full"
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="p-1"
+                  >
                     <Card>
                       <CardContent className="p-6">
                         <div className="flex gap-1 mb-4">
@@ -85,7 +94,7 @@ export default function Testimonials() {
                           <img
                             src={testimonial.image}
                             alt={testimonial.name}
-                            className="w-12 h-12 rounded-full object-cover"
+                            className="w-12 h-12 rounded-full object-contain"
                           />
                           <div>
                             <div className="font-semibold">
@@ -98,7 +107,7 @@ export default function Testimonials() {
                         </div>
                       </CardContent>
                     </Card>
-                  </div>
+                  </motion.div>
                 </CarouselItem>
               ))}
             </CarouselContent>

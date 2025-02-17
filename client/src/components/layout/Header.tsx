@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Logo from '../../assets/logo.svg';
 import {
   Sheet,
   SheetContent,
@@ -19,14 +20,12 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950 backdrop-blur-sm border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <a className="flex items-center space-x-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-                MarketPro
-              </span>
+              <img src={Logo} alt="Image description"/>
             </a>
           </Link>
 

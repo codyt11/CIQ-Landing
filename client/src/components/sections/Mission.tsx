@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { AlignCenter } from "lucide-react";
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 export default function Mission() {
@@ -13,7 +14,7 @@ export default function Mission() {
       className="aspect-[2/1] relative"
     >
       <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 h-full flex items-center">
+        <div className="container mx-auto px-4 h-full flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -25,32 +26,13 @@ export default function Mission() {
               Our Mission
             </h2>
             <p className="mt-6 text-lg md:text-xl text-white/90 leading-relaxed">
-              We're on a mission to revolutionize digital marketing through
-              innovation and data-driven strategies. Our goal is to help businesses
-              of all sizes achieve sustainable growth and meaningful connections
-              with their audiences.
+              At CatalystIQ, our mission is to provide specialized services and comprehensive,
+               end-to-end solutions that help companies of all sizes achieve success within the
+                life sciences industry. We are committed to simplifying the process of
+                 interpreting customer data so that our clients can quickly identify effective
+                  tactics, reduce unnecessary expenditures on underperforming assets, improve 
+                  customer experiences, and execute successful campaigns.
             </p>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { number: "500+", label: "Clients Served" },
-                { number: "95%", label: "Client Retention" },
-                { number: "150%", label: "Average ROI" },
-              ].map((stat) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="text-3xl font-bold text-white">
-                    {stat.number}
-                  </div>
-                  <div className="mt-2 text-white/80">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>

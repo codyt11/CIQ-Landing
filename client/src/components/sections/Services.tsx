@@ -1,43 +1,25 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { LineChart, Megaphone, PenTool, BarChart, Users, Globe } from "lucide-react";
+import { LineChart, Brain, CogIcon, BarChart, Users, Globe } from "lucide-react";
 
 const services = [
   {
-    title: "Digital Marketing",
-    description: "Strategic campaigns that drive real business results",
-    icon: Megaphone,
-    image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f",
+    title: "Data Strategy & Innovation",
+    description: "The life sciences industry is increasingly data-driven, with payors, providers, and manufacturers becoming both producers and consumers of rich, yet sometimes opaque data. At best, data utilization can guide business strategy and enable new, market leading capabilities. At worst, data can confuse and mislead. Our data strategy & innovation expertise enables clients to foster a culture of innovation and develop the data-driven capabilities needed to sustain competitive advantage. We help clients identify data gaps, select and work with third-party data vendors, develop an effective data strategy, create an analytics and data infrastructure, implement data governance processes, enable use cases, and drive operational excellence.",
+    icon: Brain,
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Brand Strategy",
-    description: "Building memorable brands that connect with audiences",
-    icon: PenTool,
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf",
+    title: "Data Science & Machine Learning",
+    description: "Our data science and machine learning experts are available to help you transform your data into insights and actions. Our team brings a range of capabilities to help you streamline data acquisition, clean and prepare data, build a predictive analytics model, and facilitate the deployment and monitoring of those models into production. Whether you’re looking to improve customer segmentation, predict customer behavior, or enhance an existing model, our team can help you achieve your organizational goals.",
+    icon: CogIcon,
+    image: "https://plus.unsplash.com/premium_photo-1682124651258-410b25fa9dc0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFjaGluZSUyMGxlYXJuaW5nfGVufDB8fDB8fHww",
   },
   {
-    title: "Analytics & Insights",
-    description: "Data-driven decisions for optimal performance",
+    title: "Advanced Analytics & Visualization",
+    description: "While life sciences organizations are increasingly utilizing data to drive business decisions, key stakeholders sometimes lack the technical skills necessary to query and manipulate available data assets. Our team of analytics and visualization professionals can make your existing data more accessible to the decision makers in your organization. We can help you visualize key performance indicators, customer trends, and other important metrics to help you decide on the best course of action for your business. Our team also specializes in customer segmentation and customer journey mapping, which can help you better understand and target potential customers.",
     icon: BarChart,
-    image: "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa",
-  },
-  {
-    title: "Content Creation",
-    description: "Engaging content that tells your story",
-    icon: LineChart,
-    image: "https://images.unsplash.com/photo-1444653389962-8149286c578a",
-  },
-  {
-    title: "Social Media",
-    description: "Building communities and driving engagement",
-    icon: Users,
-    image: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407",
-  },
-  {
-    title: "SEO Optimization",
-    description: "Improving visibility in search results",
-    icon: Globe,
-    image: "https://images.unsplash.com/photo-1495704907664-81f74a7efd9b",
+    image: "https://plus.unsplash.com/premium_photo-1661286622480-0ac245ec4e0d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGFuYWx5dGljc3xlbnwwfHwwfHx8MQ%3D%3D",
   },
 ];
 
@@ -52,9 +34,9 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold">Our Services</h2>
+          <h2 className="text-3xl font-bold">Services</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Comprehensive marketing solutions tailored to your needs
+            Our expert services deliver exceptional results in 3 key areas
           </p>
         </motion.div>
 
